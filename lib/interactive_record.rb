@@ -9,7 +9,7 @@ class InteractiveRecord
 
   def self.drop_table
     sql = "DROP TABLE IF EXISTS #{self.table_name}"
-    DB[:conn].execute](sql)
+    DB[:conn].execute(sql)
   end
 
   def self.column_names
