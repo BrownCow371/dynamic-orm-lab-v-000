@@ -7,4 +7,9 @@ class InteractiveRecord
     self.to_s.downcase.pluralize
   end
 
+  def self.drop_table
+    sql = "DROP TABLE IF EXISTS #{self.table_name}"
+    DB:[:conn}.execute](sql)
+  end
+
 end
